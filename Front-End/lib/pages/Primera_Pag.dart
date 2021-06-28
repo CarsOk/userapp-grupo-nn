@@ -12,6 +12,14 @@ class FirstRoute extends StatelessWidget {
       appBar: AppBar(
         title: Text('SENA'),
       ),
+      floatingActionButton: FloatingActionButton(
+        child: Text('+'),
+        onPressed: () {
+          Navigator.of(context).pop();
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => FirstRoute()));
+        },
+      ),
       body: SingleChildScrollView(
           child: FutureBuilder<Post>(
         future: getInfo(),
