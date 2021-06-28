@@ -1,22 +1,36 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'Primera_Pag.dart';
+
 class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text('Bienvenidos a mi app')),
-      body: Center(
-          child: ElevatedButton.icon(
-        icon: Icon(
-          Icons.pages,
-          color: Colors.greenAccent,
-          size: 24.0,
-        ),
-        label: Text('Pasar a la siguiente pagina'),
-        onPressed: () {
-          print('Pressed');
-        },
+      body: Container(
+          child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          Image.asset('assets/logo1.png'),
+          // Row(
+          //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          //   children: [
+          //     Image.asset(
+          //       'assets/whatsapp.png',
+          //       width: 60.0,
+          //     ),
+          //     Image.asset(
+          //       'assets/fb.png',
+          //       width: 30.0,
+          //     ),
+          //     Image.asset(
+          //       'assets/ig.png',
+          //       width: 30.0,
+          //     ),
+          //   ],
+          // )
+        ],
       )),
       drawer: Drawer(
         child: ListView(
@@ -29,6 +43,17 @@ class MyHomePage extends StatelessWidget {
                 currentAccountPicture: CircleAvatar(
                     backgroundColor: Colors.black45,
                     child: Text('KM', style: TextStyle(fontSize: 30.0)))),
+            Ink(
+              color: Colors.white,
+              child: (ListTile(
+                  title: Text('Formulario'),
+                  leading: Icon(Icons.folder),
+                  onTap: () {
+                    Navigator.of(context).pop();
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (BuildContext context) => FirstRoute()));
+                  })),
+            ),
             // Ink(
             //   color: Colors.white,
             //   child: (ListTile(
@@ -38,6 +63,28 @@ class MyHomePage extends StatelessWidget {
             //         Navigator.of(context).pop();
             //         Navigator.of(context).push(MaterialPageRoute(
             //             builder: (BuildContext context) => SecondRoute()));
+            //       })),
+            // ),
+            // Ink(
+            //   color: Colors.white,
+            //   child: (ListTile(
+            //       title: Text('Clientes'),
+            //       leading: Icon(Icons.supervisor_account),
+            //       onTap: () {
+            //         Navigator.of(context).pop();
+            //         Navigator.of(context).push(MaterialPageRoute(
+            //             builder: (BuildContext context) => ThirdRoute()));
+            //       })),
+            // ),
+            // Ink(
+            //   color: Colors.white,
+            //   child: (ListTile(
+            //       title: Text('Borrar'),
+            //       leading: Icon(Icons.supervisor_account),
+            //       onTap: () {
+            //         Navigator.of(context).pop();
+            //         Navigator.of(context).push(MaterialPageRoute(
+            //             builder: (BuildContext context) => ThirdRoute()));
             //       })),
             // ),
           ],
