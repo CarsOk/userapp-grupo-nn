@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:prueba_front_end/models/new_post_model.dart';
+import 'package:prueba_front_end/pages/Tercera_Pag.dart';
 
 class FirstRoute extends StatelessWidget {
   @override
@@ -47,24 +48,24 @@ class FirstRoute extends StatelessWidget {
                   autofocus: true,
                   keyboardType: TextInputType.number,
                   onChanged: (valor) => comment.edad = valor),
-              // ElevatedButton(
-              //     onPressed: () async {
-              //       Comment comentario = await registrar(comment.toJson());
-              //       if (comentario != null) {
-              //         Navigator.pop(context);
-              //         Navigator.push(
-              //             context,
-              //             MaterialPageRoute(
-              //                 builder: (context) => CommentPage(
-              //                       comment: comentario,
-              //                     )));
-              //       } else {
-              //         print('No guardado');
-              //         final snackBar = SnackBar(content: Text('No Guardado'));
-              //         ScaffoldMessenger.of(context).showSnackBar(snackBar);
-              //       }
-              //     },
-              //     child: Text('Guardar'))
+              ElevatedButton(
+                  onPressed: () async {
+                    Comment comentario = await registrar(comment.toJson());
+                    if (comentario != null) {
+                      Navigator.pop(context);
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => CommentPage(
+                                    comment: comentario,
+                                  )));
+                    } else {
+                      print('No guardado');
+                      final snackBar = SnackBar(content: Text('No Guardado'));
+                      ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                    }
+                  },
+                  child: Text('Guardar'))
             ],
           ),
         ));
