@@ -37,16 +37,16 @@ class MyHomePage extends StatelessWidget {
           padding: EdgeInsets.zero,
           children: <Widget>[
             UserAccountsDrawerHeader(
-                accountName: Text('Kevin Castro'),
-                accountEmail: Text('kevinmcf04@gmail.com'),
+                accountName: Text('Company DK'),
+                accountEmail: Text('companydk@gmail.com'),
                 decoration: BoxDecoration(color: Colors.green),
                 currentAccountPicture: CircleAvatar(
                     backgroundColor: Colors.black45,
-                    child: Text('KM', style: TextStyle(fontSize: 30.0)))),
+                    child: Text('DK', style: TextStyle(fontSize: 30.0)))),
             Ink(
               color: Colors.white,
               child: (ListTile(
-                  title: Text('Formulario'),
+                  title: Text('Lista de usuarios'),
                   leading: Icon(Icons.folder),
                   onTap: () {
                     Navigator.of(context).pop();
