@@ -17,7 +17,6 @@ class CommentPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            Divider(color: Colors.black),
             ListTile(
               leading: Icon(
                 Icons.account_box,
