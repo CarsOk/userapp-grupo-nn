@@ -46,7 +46,7 @@ class MyHomePage extends StatelessWidget {
             Ink(
               color: Colors.white,
               child: (ListTile(
-                  title: Text('Formulario'),
+                  title: Text('Lista'),
                   leading: Icon(Icons.folder),
                   onTap: () {
                     Navigator.of(context).pop();

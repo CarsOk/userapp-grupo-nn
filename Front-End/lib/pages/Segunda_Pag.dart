@@ -3,7 +3,7 @@ import 'package:http/http.dart' as http;
 import 'package:prueba_front_end/models/new_post_model.dart';
 import 'package:prueba_front_end/pages/Tercera_Pag.dart';
 
-class FirstRoute extends StatelessWidget {
+class SecondRoute extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final comment = new Comment(edad: "");
