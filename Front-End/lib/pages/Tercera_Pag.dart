@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:prueba_front_end/icons/my_news_icons.dart';
 import 'package:prueba_front_end/models/new_post_model.dart';
 
 class CommentPage extends StatelessWidget {
@@ -10,7 +11,7 @@ class CommentPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Usuarios'),
+        title: Text('Mi Usuario'),
       ),
       body: Container(
         padding: EdgeInsets.only(left: 15.0, right: 15.0),
@@ -19,26 +20,26 @@ class CommentPage extends StatelessWidget {
           children: [
             ListTile(
               leading: Icon(
-                Icons.account_box,
-                color: Colors.blueGrey,
+                MyNewsIcons.user,
+                color: Colors.black,
               ),
               title: Text('Nombre:'),
               subtitle: Text(comment.nombre),
             ),
-            Divider(color: Colors.black),
+            Divider(color: Colors.blue[900]),
             ListTile(
               leading: Icon(
-                Icons.email,
-                color: Colors.blueGrey,
+                MyNewsIcons.google,
+                color: Colors.black,
               ),
               title: Text('Correo:'),
               subtitle: Text(comment.correo),
             ),
-            Divider(color: Colors.black),
+            Divider(color: Colors.blue[900]),
             ListTile(
               leading: Icon(
-                Icons.account_circle_sharp,
-                color: Colors.blueGrey,
+                Icons.info,
+                color: Colors.black,
               ),
               title: Text('Edad:'),
               subtitle: Text(comment.edad.toString()),

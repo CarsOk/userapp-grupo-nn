@@ -39,15 +39,16 @@ class MyHomePage extends StatelessWidget {
             UserAccountsDrawerHeader(
                 accountName: Text('Company DK'),
                 accountEmail: Text('companydk@gmail.com'),
-                decoration: BoxDecoration(color: Colors.green),
+                decoration: BoxDecoration(color: Colors.blue[900]),
                 currentAccountPicture: CircleAvatar(
                     backgroundColor: Colors.black45,
                     child: Text('DK', style: TextStyle(fontSize: 30.0)))),
             Ink(
               color: Colors.white,
               child: (ListTile(
-                  title: Text('Lista de usuarios'),
-                  leading: Icon(Icons.folder),
+                  title: Text('Lista de usuarios',
+                      style: TextStyle(color: Colors.black)),
+                  leading: Icon(Icons.folder, color: Colors.black87),
                   onTap: () {
                     Navigator.of(context).pop();
                     Navigator.of(context).push(MaterialPageRoute(

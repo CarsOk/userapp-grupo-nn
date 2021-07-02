@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:prueba_front_end/icons/my_news_icons.dart';
 
 import 'package:prueba_front_end/models/Comment_model.dart';
 import 'package:prueba_front_end/pages/Segunda_Pag.dart';
@@ -42,23 +43,22 @@ class FirstRoute extends StatelessWidget {
           Comment comment = comentarios[index];
           return Column(
             children: [
-              Divider(),
               ListTile(
-                leading: Icon(Icons.title),
-                title: Text('Nombre:'),
+                leading: Icon(MyNewsIcons.user, color: Colors.black),
+                title: Text('Nombre:', style: TextStyle(color: Colors.black)),
                 subtitle: Text(comment.nombre),
               ),
-              Divider(),
               ListTile(
-                leading: Icon(Icons.content_copy),
-                title: Text('Correo:'),
+                leading: Icon(MyNewsIcons.google, color: Colors.black),
+                title: Text('Correo:', style: TextStyle(color: Colors.black)),
                 subtitle: Text(comment.correo),
               ),
               ListTile(
-                leading: Icon(Icons.account_circle_sharp),
-                title: Text('Edad:'),
+                leading: Icon(Icons.info, color: Colors.black),
+                title: Text('Edad:', style: TextStyle(color: Colors.black)),
                 subtitle: Text(comment.edad.toString()),
               ),
+              Divider(color: Colors.blue[900]),
             ],
           );
         });
